@@ -159,9 +159,77 @@
             color: #777;
         }
 
-        @media (max-width: 992px) {
-            .service-footer { grid-template-columns: 1fr; gap: 30px; }
-            .service-item { border-right: none; }
+        /* 手機與平板優化排版 */
+        @media (max-width: 768px) {
+            /* 1. 導覽列調整：改為上下排列 */
+            header {
+                flex-direction: column;
+                padding: 15px 5%;
+                gap: 15px;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0;
+            }
+
+            nav a {
+                margin: 5px 10px;
+                font-size: 0.9rem;
+                white-space: nowrap; /* 防止文字換行斷開 */
+            }
+
+            /* 2. 主視覺區調整：縮小字體與邊距 */
+            .hero-section {
+                height: 450px; /* 稍微縮減高度 */
+                padding: 0 5%;
+                justify-content: center; /* 手機上內容居中 */
+            }
+
+            .hero-content {
+                padding: 25px;
+                max-width: 90%;
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
+            /* 3. 底部服務區塊調整：改為單欄排列並增加間距 */
+            .service-footer {
+                grid-template-columns: 1fr;
+                padding: 30px 10%;
+                gap: 25px;
+            }
+
+            .service-item {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.15); /* 改為底線分隔 */
+                padding: 0 0 20px 0;
+                justify-content: flex-start;
+            }
+
+            .service-item:last-child {
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+
+            /* 4. 最底部資訊列調整 */
+            .info-bar {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+                padding: 20px 5%;
+                line-height: 1.5;
+            }
         }
     </style>
 </head>
