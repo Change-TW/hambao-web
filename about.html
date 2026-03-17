@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我們 - 堡貝心 Hambao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #fdfaf5;
+            --primary-sage: #94a69d;
+            --accent-orange: #e8a57c;
+            --text-main: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.8;
+        }
+
+        /* 導覽列 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-img { height: 60px; width: auto; }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--accent-orange);
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 5px;
+        }
+
+        /* 內頁形象區 */
+        .page-banner {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1484665754804-74b091211472?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* 內容區塊 */
+        .container {
+            padding: 80px 10%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .story-section {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .story-section h3 {
+            color: var(--primary-sage);
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        .story-content {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 品牌價值 */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .value-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+
+        .value-icon { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+
+        /* 結語區 */
+        .final-quote {
+            background-color: var(--primary-sage);
+            color: white;
+            padding: 60px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .final-quote h4 { font-size: 1.5rem; margin-bottom: 10px; }
+
+        /* 底部資訊 */
+        .info-bar {
+            background-color: #e8ece9;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 5px 10px; margin-left: 0; }
+            .values-grid { grid-template-columns: 1fr; }
+            .info-bar { flex-direction: column; text-align: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-box">
+            <img src="s1.jpg" alt="小亨堡Logo" class="logo-img">
+            <div style="line-height: 1.2;">
+                <span style="font-size: 1.5rem; font-weight: bold; letter-spacing: 2px;">堡貝心</span><br>
+                <span style="font-size: 0.9rem; color: #888;">Hambao</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="index_consult.html">待產媽咪諮詢</a>
+            <a href="index_team.html">育兒神隊友</a>
+            <a href="course.html">預約課程</a>
+            <a href="about.html" class="active">關於我們</a>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <h2>關於堡貝心</h2>
+    </section>
+
+    <main class="container">
+        <section class="story-section">
+            <h3>品牌故事：堡貝心的誕生</h3>
+            <div class="story-content">
+                <p>我們相信，每一個家庭都是一座城堡。而孩子，是城堡裡最珍貴的小主人。</p>
+                <p>「我是亨堡，和妳一起打造家的城堡。」這不只是一句口號，更是我們的創業初衷。在創辦這項服務前，我們看見無數新手媽咪在待產時的焦慮，以及育兒初期的手忙腳亂。那種「想給孩子最好，卻不知道該怎麼做」的心情，我們深有所感。</p>
+                <p>於是，「堡貝心」集合了專業的育兒顧問、護理背景導師與家政專家，組成最堅強的支援網絡，希望能成為每個家庭最溫暖的後盾。</p>
+            </div>
+        </section>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <span class="value-icon">🤝</span>
+                <h4>信任</h4>
+                <p>我們以最嚴謹的專業，換取家長最安心的託付。</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">🕯️</span>
+                <h4>溫馨</h4>
+                <p>不只是傳遞知識，更在乎每一位媽咪的情緒與感受。</p>
+            </div>
+            <div class="value-card">
+                <span class="value-icon">🛡️</span>
+                <h4>守護</h4>
+                <p>守護每個家庭的隱私與安全，打造穩固的成長環境。</p>
+            </div>
+        </div>
+
+        <section class="final-quote">
+            <h4>「妳不需要獨自堅強，讓我們陪妳優雅育兒。」</h4>
+            <p>專業的愛，守護您的家</p>
+        </section>
+    </main>
+
+    <div class="info-bar">
+        <div>站上地圖 | 關聯資訊話: 000-3136-5300 | 臉書: 小亨堡</div>
+        <div>&copy; 2026 堡貝心 Hambao - 專業家政服務聯盟</div>
+    </div>
+
+</body>
+</html>

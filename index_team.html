@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>育兒神隊友 - 堡貝心 Hambao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #fdfaf5;
+            --primary-sage: #94a69d;
+            --accent-orange: #e8a57c;
+            --text-main: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+        }
+
+        /* 導覽列 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--accent-orange);
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 5px;
+        }
+
+        /* 內頁形象區 */
+        .page-banner {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1594845202720-388709968469?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .page-banner h2 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        /* 內容區塊 */
+        .container {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 育兒專家特色區 */
+        .expert-intro {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 80px;
+        }
+
+        .expert-text { flex: 1; }
+        .expert-text h3 { color: var(--primary-sage); font-size: 1.8rem; }
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .feature-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 20px;
+            border-top: 5px solid var(--primary-sage);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .feature-item h4 {
+            margin-top: 0;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 預約區 */
+        .booking-cta {
+            background-color: #f1f4f2;
+            padding: 50px;
+            border-radius: 30px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-large {
+            background-color: var(--accent-orange);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 35px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.3s;
+        }
+
+        .btn-large:hover { background-color: #d18b62; transform: scale(1.05); }
+
+        /* 底部資訊 */
+        .info-bar {
+            background-color: #e8ece9;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 60px;
+        }
+
+        /* 手機優化 */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 5px 10px; margin-left: 0; }
+            .expert-intro { flex-direction: column; text-align: center; }
+            .info-bar { flex-direction: column; text-align: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-box">
+            <img src="s1.jpg" alt="小亨堡Logo" class="logo-img">
+            <div style="line-height: 1.2;">
+                <span style="font-size: 1.5rem; font-weight: bold; letter-spacing: 2px;">堡貝心</span><br>
+                <span style="font-size: 0.9rem; color: #888;">Hambao</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="index_consult.html">待產媽咪諮詢</a>
+            <a href="index_team.html" class="active">育兒神隊友</a>
+            <a href="course.html">預約課程</a>
+            <a href="about.html" class="active">關於我們</a>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div>
+            <h2>育兒神隊友</h2>
+            <p>不只是協助，更是您最可靠的支柱</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="expert-intro">
+            <div class="expert-text">
+                <h3>為什麼需要「神隊友」？</h3>
+                <p>育兒不該是一個人的戰鬥。從新生兒的睡眠調節、換奶期的營養銜接，到幼兒時期的行為引導，我們的專家團隊會根據孩子的氣質，提供量身打造的育兒對策。</p>
+            </div>
+        </div>
+
+        <div class="feature-list">
+            <div class="feature-item">
+                <h4>🍼 專業保理指導</h4>
+                <p>正確的拍嗝方式、沐浴技巧，以及解決新手爸媽最頭痛的餵奶問題。</p>
+            </div>
+            <div class="feature-item">
+                <h4>🌙 睡眠規律引導</h4>
+                <p>協助建立寶寶生理時鐘，讓家長與孩子都能擁有高品質的深度睡眠。</p>
+            </div>
+            <div class="feature-item">
+                <h4>📈 成長發展追蹤</h4>
+                <p>觀察大肌肉、小肌肉與語言發展，提供適齡的感官刺激建議與遊戲。</p>
+            </div>
+            <div class="feature-item">
+                <h4>❤️ 親子關係諮詢</h4>
+                <p>理解孩子的哭鬧背後的訊息，建立充滿愛與信任的正向教養環境。</p>
+            </div>
+        </div>
+
+        <div class="booking-cta">
+            <h3>讓育兒變得更優雅、更輕鬆</h3>
+            <p>專業團隊隨時待命，為您的家庭城堡守護最純真的笑容。</p>
+            <a href="#" class="btn-large">預約專家諮詢</a>
+        </div>
+    </main>
+
+    <div class="info-bar">
+        <div>站上地圖 | 關聯資訊話: 000-3136-5300 | 臉書: 小亨堡</div>
+        <div>&copy; 2026 堡貝心 Hambao - 專業家政服務聯盟</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待產媽咪諮詢 - 堡貝心 Hambao</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-light: #fdfaf5;     /* 背景淺米色 */
+            --primary-sage: #94a69d;  /* 柔和綠 */
+            --accent-orange: #e8a57c; /* 溫暖橘色 */
+            --text-main: #4a4a4a;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+        }
+
+        /* 導覽列 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            margin-left: 30px;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        nav a.active {
+            color: var(--accent-orange);
+            border-bottom: 2px solid var(--accent-orange);
+            padding-bottom: 5px;
+        }
+
+        /* 內頁形象區 */
+        .page-banner {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=1500&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .page-banner h2 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+        }
+
+        /* 內容區塊 */
+        .container {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro-text h3 {
+            color: var(--primary-sage);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        /* 諮詢項目排版 */
+        .consult-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .consult-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .consult-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .consult-card h4 {
+            color: var(--accent-orange);
+            font-size: 1.4rem;
+            margin-top: 0;
+            border-left: 4px solid var(--accent-orange);
+            padding-left: 15px;
+        }
+
+        .consult-card ul {
+            padding-left: 20px;
+            color: #666;
+        }
+
+        .consult-card li {
+            margin-bottom: 10px;
+        }
+
+        /* 流程說明區 */
+        .process-section {
+            background-color: var(--primary-sage);
+            color: white;
+            padding: 60px 10%;
+            text-align: center;
+            border-radius: 30px;
+            margin-top: 50px;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .step-num {
+            font-size: 2rem;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            opacity: 0.7;
+        }
+
+        /* 底部資訊 */
+        .info-bar {
+            background-color: #e8ece9;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 60px;
+        }
+
+        /* 手機優化 */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; }
+            nav a { margin: 5px 10px; margin-left: 0; }
+            .page-banner h2 { font-size: 1.8rem; }
+            .process-steps { flex-direction: column; }
+            .info-bar { flex-direction: column; text-align: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-box">
+            <img src="s1.jpg" alt="小亨堡Logo" class="logo-img">
+            <div style="line-height: 1.2;">
+                <span style="font-size: 1.5rem; font-weight: bold; letter-spacing: 2px;">堡貝心</span><br>
+                <span style="font-size: 0.9rem; color: #888;">Hambao</span>
+            </div>
+        </a>
+        <nav>
+            <a href="index.html">首頁</a>
+            <a href="index_consult.html">待產媽咪諮詢</a>
+            <a href="index_team.html" class="active">育兒神隊友</a>
+            <a href="course.html">預約課程</a>
+            <a href="about.html" class="active">關於我們</a>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div>
+            <h2>待產媽咪諮詢</h2>
+            <p>專業的愛，陪伴妳迎接新生命</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="intro-text">
+            <h3>「我是亨堡，讓我陪妳走過這段珍貴旅程」</h3>
+            <p>懷孕是一段奇妙的旅程，但也充滿了未知與不安。我們提供全方位的專業諮詢，讓妳在身心最放鬆的狀態下，準備好迎接城堡裡的小主人。</p>
+        </div>
+
+        <div class="consult-grid">
+            <div class="consult-card">
+                <h4>🤰 孕期生活諮詢</h4>
+                <ul>
+                    <li>各孕期營養攝取建議</li>
+                    <li>孕期情緒支援與壓力釋放</li>
+                    <li>居家環境安全規劃建議</li>
+                </ul>
+            </div>
+            <div class="consult-card">
+                <h4>📝 生產計畫陪伴</h4>
+                <ul>
+                    <li>了解不同生產方式與流程</li>
+                    <li>待產包必備清單整理</li>
+                    <li>產後心理建設諮詢</li>
+                </ul>
+            </div>
+            <div class="consult-card">
+                <h4>🏡 產後初期準備</h4>
+                <ul>
+                    <li>新生兒用品挑選建議</li>
+                    <li>母乳餵養與照護知識預習</li>
+                    <li>家政與坐月子動線規劃</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="process-section">
+            <h3>諮詢三步驟</h3>
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-num">01</span>
+                    <p>線上預約登記</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">02</span>
+                    <p>專人需求訪談</p>
+                </div>
+                <div class="step">
+                    <span class="step-num">03</span>
+                    <p>量身打造計畫</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="info-bar">
+        <div>站上地圖 | 關聯資訊話: 000-3136-5300 | 臉書: 小亨堡</div>
+        <div>&copy; 2026 堡貝心 Hambao - 專業家政服務聯盟</div>
+    </div>
+
+</body>
+</html>
